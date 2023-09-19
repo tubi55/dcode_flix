@@ -34,7 +34,13 @@ function Login() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<Image src='https://rb.gy/p2hphi' fill priority className='z-10 opacity-60 hidden md:inline object-cover' alt='login' />
+			<Image
+				src='https://rb.gy/p2hphi'
+				fill
+				priority
+				className='z-10 opacity-60 hidden md:inline object-cover'
+				alt='login'
+			/>
 
 			<Image
 				width={150}
@@ -51,6 +57,10 @@ function Login() {
 			>
 				<h1 className='text-4xl font-semibold'>Sign In</h1>
 
+				<p className='text-4 text-red-500'>
+					This page was made for the purpose of studying web programing.. not a scam page!!
+				</p>
+
 				<div className='space-y-4'>
 					<input
 						type='text'
@@ -58,7 +68,8 @@ function Login() {
 						className='input'
 						{...register('email', {
 							required: true,
-							pattern: /^[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*\.([a-zA-Z]){2,4}$/,
+							pattern:
+								/^[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_]?[0-9a-zA-Z])*\.([a-zA-Z]){2,4}$/,
 							//시작조건으로는 모든숫자,대소문자포함가능,중간에 -_허용 / 중간에 @무조건포함 /앞의 동일조건처리 / 중간에 무조건 .포함 / 문자값만 2개이상이고 4글자 넘지 않아야 함
 						})}
 					/>
@@ -77,7 +88,10 @@ function Login() {
 					{errors.password && <span>Please enter a valid Password</span>}
 				</div>
 
-				<button className='w-full rounded bg-[#e40914] py-3 font-semibold' onClick={() => setLogin(true)}>
+				<button
+					className='w-full rounded bg-[#e40914] py-3 font-semibold'
+					onClick={() => setLogin(true)}
+				>
 					Sign In
 				</button>
 
